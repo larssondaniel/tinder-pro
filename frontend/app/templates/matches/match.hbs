@@ -1,0 +1,24 @@
+<div class="messages">
+  {{#if messages}}
+    {{#each messages}}
+      <div class="panel callout radius">
+        {{content}}
+      </div>
+    {{/each}}
+  {{else}}
+    You go first...
+  {{/if}}
+</div>
+
+<form>
+  <div class="row">
+    <div class="medium-10 columns">
+      {{input type="text" value=messageContent}}
+    </div>
+    <div class="medium-2 columns">
+      <button {{action 'send'}} class="button small radius">Send</button>
+    </div>
+  </div>
+</form>
+
+{{outlet}}

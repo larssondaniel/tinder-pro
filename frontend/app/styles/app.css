@@ -1,0 +1,13 @@
+.top-bar {
+    margin-bottom: 30px;
+}
+
+.messages {
+    background-color: #eee;
+    height: 500px;
+}
+
+.picture {
+    background-color: red;
+    height: 300px;
+}

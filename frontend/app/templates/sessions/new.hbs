@@ -1,0 +1,31 @@
+<form {{action "create" on="submit"}}>
+  <div class="row">
+    <div class="small-5 small-offset-3 columns">
+      <div class="row">
+        <div class="small-3 columns">
+          <label for="right-label" class="right inline">Email</label>
+        </div>
+        <div class="small-9 columns">
+          {{input type="text" value=email placeholder="Email"}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-3 columns">
+          <label for="right-label" class="right inline">Password</label>
+        </div>
+        <div class="small-9 columns">
+          {{input type="text" value=password placeholder="Password"}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-3 columns">
+        </div>
+        <div class="small-9 columns">
+          {{input type="submit" value="Login" class="button small radius"}}
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+{{outlet}}
