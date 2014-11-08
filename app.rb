@@ -1,17 +1,23 @@
 require 'pyro'
 require 'sinatra'
 
-FACEBOOK_ID = ''
-FACEBOOK_TOKEN = ''
+set :sessions, true
+set :session_secret, 'some-very-large-random-value'
 
-enable :sessions
+pyro = TinderPyro::Client.new
 
 get '/' do
   File.read(File.join('public', 'index.html'))
 end
 
-# pyro = TinderPyro::Client.new
-# pyro.sign_in(FACEBOOK_ID, FACEBOOK_TOKEN)
+post '/sign_in' do 
+ 	pyro.sign_in( params[:FACEBOOK_ID], params[:FACEBOOK_TOKEN] )
+ 	session[:auth] = pyro.instance_variable_get(:@requestor).instance_variable_get(:@auth_token)
+ 	"#{pyro.instance_variable_get(:@requestor).instance_variable_get(:@auth_token)}"
+end
 
-
-# p pyro.get_nearby_users['results'].map { |e| e['name']  }
+get '/get_nearby_users' do
+	pyro.instance_variable_get(:@requestor).instance_variable_set(:@auth_token, session[:auth])
+	x = pyro.get_nearby_users
+	"#{x}"
+end
