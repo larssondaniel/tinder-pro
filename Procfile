@@ -1,1 +1,1 @@
-web: exec node app.js
+web: ruby app.rb
