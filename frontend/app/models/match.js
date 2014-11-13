@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 var Match = DS.Model.extend({
-  name: DS.attr('string'),
+  peer: DS.belongsTo('user', { async: true }),
   messages: DS.hasMany('message', { async: true })
 });
 

@@ -5,6 +5,7 @@
 .messages {
     background-color: #eee;
     height: 500px;
+    overflow: scroll;
 }
 
 .picture {

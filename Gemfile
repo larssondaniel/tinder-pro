@@ -5,3 +5,4 @@ source "https://rubygems.org"
 gem 'tinder_pyro', '~> 0.0.1', require: 'pyro'
 gem 'sinatra'
 
+gem 'rest-client', '~> 1.7.2'

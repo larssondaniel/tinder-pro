@@ -9,8 +9,9 @@ Router.map(function() {
   this.resource('matches', function() {
     this.route('match', { path: '/:match_id' });
   });
-  this.route('users');
   this.route('sessions/new', { path: '/login' });
+  this.route('user', { path: '/users/:user_id' });
+  this.route('users/recommendations');
 });
 
 export default Router;

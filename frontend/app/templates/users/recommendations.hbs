@@ -1,0 +1,18 @@
+<div class="row">
+  <h2>{{user.name}}</h2>
+</div>
+
+<div class="row">
+  {{user-photos model=user.photos}}
+</div>
+
+<div class="row">
+  <p>{{user.biography}}</p>
+</div>
+
+<div class="row">
+  <button {{action "like"}} class="button small radius">Like</button>
+  <button {{action "pass"}} class="button small radius">Pass</button>
+</div>
+
+{{outlet}}

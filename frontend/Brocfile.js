@@ -18,6 +18,7 @@ var app = new EmberApp();
 // along with the exports of each module as its value.
 
 app.import('bower_components/fastclick/lib/fastclick.js');
+app.import('bower_components/holderjs/holder.js');
 
 app.import('bower_components/foundation/css/normalize.css')
 app.import('bower_components/foundation/css/foundation.css')
